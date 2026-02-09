@@ -114,7 +114,7 @@ public class MainViewModel extends AndroidViewModel {
 
     public void updateSearchText(String query) {
         state.setQuery(query);
-        uiState.resetSearchButtonVisibility = state.getQuery().length() != 0;
+        uiState.resetSearchButtonVisibility = !state.getQuery().isEmpty();
         updateUiState();
     }
 
